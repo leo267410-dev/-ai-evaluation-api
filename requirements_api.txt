@@ -1,36 +1,23 @@
-# AI Reasoning & Evaluation Platform API Dependencies
+# AI Reasoning & Evaluation Platform Dependencies - Render Compatible
 
 # Core API Framework
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
 
 # Data Validation and Serialization
-pydantic==2.5.0
+pydantic>=2.5.0
 
 # CORS Support
-python-multipart==0.0.6
+python-multipart>=0.0.6
 
 # System Monitoring
-psutil==5.9.6
+psutil>=5.9.0
 
 # Async Support
-asyncio
-aiofiles==23.2.1
+aiofiles>=23.2.0
 
 # Date/Time Handling
-python-dateutil==2.8.2
+python-dateutil>=2.8.0
 
-# Logging Enhancement
-colorlog==6.8.0
-
-# Development Dependencies
-pytest==7.4.3
-pytest-asyncio==0.21.1
-httpx==0.25.2
-
-# Optional: For production deployment
-gunicorn==21.2.0
-redis==5.0.1
-
-# Optional: For monitoring
-prometheus-client==0.19.0
+# Development Dependencies (optional)
+httpx>=0.25.0
