@@ -1,0 +1,25 @@
+# Render Deployment Configuration
+
+services:
+  # AI Evaluation API Service
+  - type: web
+    name: ai-evaluation-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements_api.txt"
+    startCommand: "uvicorn api_server:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHON_VERSION
+        value: 3.9
+
+# Auto-deploy from main branch
+autoDeploy: true
+
+# Health check configuration
+health:
+  path: /health
+  timeout: 100
+  initialDelaySeconds: 10
